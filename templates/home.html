@@ -1,0 +1,89 @@
+<!-- 
+    Styles Adapted from :
+ =======================================================
+  * Template Name: Maundy - v2.2.0
+  * Template URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ========================================================
+  image bg:  https://unsplash.com/photos/gUKv_yrQ_tk
+-->>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Wind Power Prediction</title>
+  <meta content="Predicts the power in kWs emitted from a wind turbine turn depending on the Wind Speed entered in m/s." name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Template Main CSS File -->
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+<link href="{{ url_for('static', filename='js/main.js') }}" />
+  <!-- Template Main JS File -->
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="h-100 row align-items-center">
+    <div class="container d-flex flex-column align-items-center">
+
+      <h1>Wind Power Predition</h1>
+      <h2 id="result"></h2>
+      <div class="prediction">
+        <h4>Enter Wind Speed in meters per second:</h4>
+        <form action="forms/notify.php" method="get" role="form" class="form-group">
+          <div class="predict-form">
+            <input type="text" class="form-control"  name="windspeed"><input type="submit" value="Enter Speed">
+          </div>
+          <div class="mt-2">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Calculating Wind Power . Thank you!</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header><!-- End #header -->
+
+  <main id="main">
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        <strong><span>G00388666</span></strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End #footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <script src="{{ url_for('static', filename='js/main_scripts.js') }}"></script>
+
+</body>
+
+</html>
